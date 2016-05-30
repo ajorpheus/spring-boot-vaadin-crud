@@ -9,7 +9,7 @@
  *
  */
 
-package amazon.domain;
+package amazon;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.StringUtils;
@@ -82,7 +82,8 @@ public class ProductVaadinUI extends UI{
 				productEditor.setVisible(false);
 			}
 			else {
-				productEditor.editProduct((Product) grid.getSelectedRow());
+				Product selectedProduct = (Product) grid.getSelectedRow();
+				productEditor.editProduct(selectedProduct);
 			}
 		});
 

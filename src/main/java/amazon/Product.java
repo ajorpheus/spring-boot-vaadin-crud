@@ -9,7 +9,7 @@
  *
  */
 
-package amazon.domain;
+package amazon;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -30,10 +30,15 @@ public class Product {
 
 	private String expectedPrice;
 
-	private String currentPrice;
+	private String currentPrice = "";
 
 	public Product(){
 
+	}
+
+	@Override
+	public String toString() {
+		return String.format("Customer[id=%d, name='%s', url='%s', expectedPrice='%s']", id, name, url, expectedPrice);
 	}
 
 	public Product(String name, String url, String expectedPrice) {

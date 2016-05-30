@@ -9,7 +9,7 @@
  *
  */
 
-package amazon.domain;
+package amazon;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -39,7 +39,7 @@ public class ProductEditor extends VerticalLayout{
 
 	Button save = new Button("Save", FontAwesome.SAVE);
 	Button cancel = new Button("Cancel");
-	Button delete = new Button("Delete", FontAwesome.DELICIOUS);
+	Button delete = new Button("Delete", FontAwesome.TRASH_O);
 	CssLayout actions = new CssLayout(save, cancel, delete);
 
 	@Autowired
@@ -59,7 +59,7 @@ public class ProductEditor extends VerticalLayout{
 		boolean isPersisted = p.getId() != null;
 
 		if (isPersisted){
-			repository.getOne(p.getId());
+			this.product = repository.findOne(p.getId());
 		} else {
 			this.product = p;
 		}

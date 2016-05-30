@@ -9,7 +9,7 @@
  *
  */
 
-package amazon.domain;
+package amazon;
 
 import java.util.List;
 
