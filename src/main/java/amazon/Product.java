@@ -11,6 +11,7 @@
 
 package amazon;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -28,6 +29,7 @@ public class Product {
 
 	private String url;
 
+	@Column(name = "expected_Price")
 	private String expectedPrice;
 
 	private String currentPrice = "";
