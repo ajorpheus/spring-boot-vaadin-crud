@@ -40,22 +40,6 @@ public class Application {
 				log.info(product.toString());
 			}
 			log.info("");
-
-			// fetch an individual product by ID
-			Product product = repository.findOne(1L);
-			log.info("product found with findOne(1L):");
-			log.info("--------------------------------");
-			log.info(product.toString());
-			log.info("");
-
-			// fetch customers by last name
-			log.info("product found with findByNameStartsWithIgnoreCase('Samsung'):");
-			log.info("--------------------------------------------");
-			for (Product product2 : repository
-					.findByNameStartsWithIgnoreCase("Bauer")) {
-				log.info(product2.toString());
-			}
-			log.info("");
 		};
 	}
 
